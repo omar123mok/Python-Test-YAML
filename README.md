@@ -1,3 +1,6 @@
+[![validate](https://github.com/omar123mok/Python-Test-YAML/actions/workflows/validate.yml/badge.svg)](https://github.com/omar123mok/Python-Test-YAML/actions/workflows/validate.yml)
+
+
 # Data Validation
 This repository contains a validation script and GitHub Actions workflow to validate data in a YAML file.
 
