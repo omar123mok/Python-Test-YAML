@@ -13,3 +13,5 @@ jobs:
           pip install pytest --quiet 
           pip install pyaml --quiet 
           pytest 
+    - name: Running the code on data.yaml
+      run: python main.py
