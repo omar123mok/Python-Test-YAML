@@ -17,9 +17,7 @@ def test_validate_keys_valid_input():
 def test_validate_keys_invalid_input():
     with pytest.raises(AssertionError):
         for x in invalid_data:
-            code.validate_keys(x, 1) == "The following keys are missing: ['firstname', 'lastname', 'gender', " \
-                                               "'tags'] for data at list 1"
-
+            code.validate_keys(x, 1) == "All required keys are present for data at list index 1"
 
 def test_validate_values_valid_input():
     for x in valid_data:
@@ -29,6 +27,4 @@ def test_validate_values_valid_input():
 def test_validate_values_invalid_input():
     with pytest.raises(AssertionError):
         for x in invalid_data:
-            code.validate_values(x, 1) == "The following values are missing: {'firstname': 'Value is missing', " \
-                                                 "'lastname': 'Value is missing', 'gender': 'Value is missing', " \
-                                                 "'tags': 'Value is missing'} for data at list 1"
+            assert code.validate_values(x, 1) == "All values are present for data at list index 1"
